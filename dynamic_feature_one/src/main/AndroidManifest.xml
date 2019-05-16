@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:dist="http://schemas.android.com/apk/distribution"
+          package="accubits.com.dynamic_feature_one">
+
+    <dist:module
+            dist:instant="false"
+            dist:onDemand="true"
+            dist:title="@string/title_dynamic_feature_one">
+        <dist:fusing dist:include="true"/>
+    </dist:module>
+
+    <application
+        android:name=".MyDynamicAppOne">
+        <activity
+                android:name=".MainActivity">
+        </activity>
+    </application>
+
+</manifest>
