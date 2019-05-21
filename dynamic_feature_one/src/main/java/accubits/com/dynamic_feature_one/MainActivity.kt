@@ -3,7 +3,7 @@ package accubits.com.dynamic_feature_one
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.facebook.drawee.backends.pipeline.Fresco
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_dynamic_one.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_dynamic_one)
         Fresco.initialize(this)
 
         when ((min..max).random()) {

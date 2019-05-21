@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">DynamicModuleSample</string>
     <string name="title_dynamic_feature_one">Dynamic Module One</string>
+    <string name="title_dynamic_feature_two">Dynamic Module Two</string>
+    <string name="title_dynamic_feature_three">Dynamic Module Three</string>
 </resources>

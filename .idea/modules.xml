@@ -5,6 +5,8 @@
       <module fileurl="file://$PROJECT_DIR$/Dynaminc-Modules-Android.iml" filepath="$PROJECT_DIR$/Dynaminc-Modules-Android.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/dynamic_feature_one/dynamic_feature_one.iml" filepath="$PROJECT_DIR$/dynamic_feature_one/dynamic_feature_one.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dynamic_feature_three/dynamic_feature_three.iml" filepath="$PROJECT_DIR$/dynamic_feature_three/dynamic_feature_three.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dynamic_feature_two/dynamic_feature_two.iml" filepath="$PROJECT_DIR$/dynamic_feature_two/dynamic_feature_two.iml" />
     </modules>
   </component>
 </project>

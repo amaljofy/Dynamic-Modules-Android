@@ -22,7 +22,7 @@ android {
     }
 
 
-    dynamicFeatures = [":dynamic_feature_one"]
+    dynamicFeatures = [":dynamic_feature_one", ":dynamic_feature_two", ":dynamic_feature_three"]
 
 
 }

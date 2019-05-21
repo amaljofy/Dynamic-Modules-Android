@@ -3,6 +3,7 @@ package accubits.com.dynamicmodulesample
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import com.google.android.play.core.splitcompat.SplitCompat
 import com.google.android.play.core.splitinstall.SplitInstallManager
@@ -40,12 +41,57 @@ class MainActivity : AppCompatActivity() {
 
         }
 
+        btn2.setOnClickListener {
+            // Creates a request to install a module.
+            request =
+                SplitInstallRequest
+                    .newBuilder()
+                    // You can download multiple on demand modules per
+                    // request by invoking the following method for each
+                    // module you want to install.
+                    .addModule("dynamic_feature_two")
+                    .build()
+
+            manager.startInstall(request)
+            // Registers the listener.
+            manager.registerListener(listener)
+        }
+
+        btn3.setOnClickListener {
+            // Creates a request to install a module.
+            request =
+                SplitInstallRequest
+                    .newBuilder()
+                    // You can download multiple on demand modules per
+                    // request by invoking the following method for each
+                    // module you want to install.
+                    .addModule("dynamic_feature_three")
+                    .build()
+
+            manager.startInstall(request)
+            // Registers the listener.
+            manager.registerListener(listener)
+        }
+
     }
 
     private fun onSuccessfulLoad(moduleName: String, launch: Boolean) {
         if (launch) {
-            var intent1 = Intent(this, Class.forName("accubits.com.dynamic_feature_one.MainActivity"))
-            startActivity(intent1)
+            when {
+                moduleName.contains("dynamic_feature_one") -> {
+                    val intent1 = Intent(this, Class.forName("accubits.com.dynamic_feature_one.MainActivity"))
+                    startActivity(intent1)
+                }
+                moduleName.contains("dynamic_feature_two") -> {
+                    val intent2 = Intent(this, Class.forName("accubits.com.dynamic_feature_two.MainActivity"))
+                    startActivity(intent2)
+                }
+                moduleName.contains("dynamic_feature_three") -> {
+                    val intent2 = Intent(this, Class.forName("accubits.com.dynamic_feature_three.MainActivity"))
+                    startActivity(intent2)
+                }
+            }
+
         }
     }
 
