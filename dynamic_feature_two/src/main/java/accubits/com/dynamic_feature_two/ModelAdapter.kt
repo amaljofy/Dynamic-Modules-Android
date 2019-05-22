@@ -1,5 +1,7 @@
 package accubits.com.dynamic_feature_two
 
+import accubits.com.dynamic_feature_two.constants.ViewConstants.CHAT_LEFT
+import accubits.com.dynamic_feature_two.constants.ViewConstants.CHAT_RIGHT
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -9,9 +11,6 @@ import android.widget.TextView
 class ModelAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     private val modelList = ArrayList<Model>()
-    private val CHAT_LEFT = 10
-    private val CHAT_RIGHT = 11
-
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         var viewHolder: RecyclerView.ViewHolder? = null
         val inflater = LayoutInflater.from(viewGroup.context)

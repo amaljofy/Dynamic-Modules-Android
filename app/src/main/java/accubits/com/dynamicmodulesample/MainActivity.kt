@@ -87,7 +87,7 @@ class MainActivity : AppCompatActivity() {
                     startActivity(intent2)
                 }
                 moduleName.contains("dynamic_feature_three") -> {
-                    val intent2 = Intent(this, Class.forName("accubits.com.dynamic_feature_three.MainActivity"))
+                    val intent2 = Intent(this, Class.forName("accubits.com.dynamic_feature_three.HomeActivity"))
                     startActivity(intent2)
                 }
             }
