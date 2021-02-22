@@ -20,7 +20,7 @@ jobs:
           
       - name: Receive Github Tag
         id: tag
-        run: echo "::set-output name=TAG_NUMBER::$(git describe --tags `git rev-list --tags)"
+        run: echo "::set-output name=TAG_NUMBER::$(git rev-list --tags --max-count=1)"
 
       - name: Bump version code
         uses: chkfung/android-version-actions@v1.1
