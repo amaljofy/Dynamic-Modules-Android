@@ -17,7 +17,11 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 1.8   
-        
+          
+      - name: Receive Github Tag
+        id: tag
+        run: echo "::set-output name=TAG_NUMBER::$(git describe --tags `git rev-list --tags)"
+
       - name: Bump version code
         uses: chkfung/android-version-actions@v1.1
         with:
@@ -35,15 +39,6 @@ jobs:
         id: buildRelease
         run: ./gradlew bundleRelease
         
-      - name: Sign Release AAB
-        id: sign
-        uses: r0adkll/sign-android-release@v1
-        with:
-          releaseDirectory: app/build/outputs/bundle/prodRelease
-          signingKeyBase64: ${{ secrets.SIGNING_KEY }}
-          alias: ${{ secrets.ALIAS }}
-          keyStorePassword: ${{ secrets.KEY_STORE_PASSWORD }}
-          keyPassword: ${{ secrets.KEY_PASSWORD }}
         
           
     
