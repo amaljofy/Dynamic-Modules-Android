@@ -20,7 +20,7 @@ jobs:
           
       - name: Receive Github Tag
         id: tag
-        run: echo "::set-output name=TAG_NUMBER::$(git describe --abbrev=0)"
+        run: echo "::set-output name=TAG_NUMBER::$(git branch)"
 
       - name: Bump version code
         uses: chkfung/android-version-actions@v1.1
