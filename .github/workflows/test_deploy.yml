@@ -32,6 +32,7 @@ jobs:
           gradlePath: app/build.gradle
           versionCode: ${{steps.commits.outputs.COMMIT_COUNT}}
           versionName: ${{steps.tag.outputs.TAG_NUMBER}}
+        
  
       - name: Grant rights
         run: chmod +x build.gradle
