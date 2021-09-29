@@ -17,7 +17,7 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 1.8   
-
+          
       - name: Bump version code
         uses: chkfung/android-version-actions@v1.1
         with:
@@ -26,14 +26,6 @@ jobs:
           
       - name: Grant rights
         run: chmod +x build.gradle
-          
-      - name: Build with Gradle
-        id: build
-        run: ./gradlew build
-        
-      - name: Build Release AAB
-        id: buildRelease
-        run: ./gradlew bundleRelease
         
         
           
